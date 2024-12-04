@@ -1,0 +1,171 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Loader animation */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid rgb(255, 0, 157);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button styling */
+.btn-download {
+  padding: 10px 8px;
+  background-color: #0663af;
+  color: white; 
+  cursor: pointer;
+  width: 30%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.25s;
+}
+
+.btn-download:hover {
+  background-color: #006bb3;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .btn-download {
+    width: 50%;
+  }
+
+  .modal-container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .modal-button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-download {
+    width: 70%;
+    font-size: 0.9em;
+  }
+
+  .modal-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .modal-button {
+    width: 70%;
+    font-size: 0.9em;
+  }
+}
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Modal container */
+.modal-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Max width to prevent it from being too large */
+  box-sizing: border-box; /* To include padding in width calculation */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal text */
+.modal-text {
+  color: black;
+}
+
+/* Modal success text */
+.modal-success-text {
+  color: #00417c;
+}
+
+/* Modal button */
+.modal-button {
+  margin-top: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #0663af;
+  color: white;
+  cursor: pointer;
+  width: 20%; /* Ensures button takes up full width */
+  max-width: 200px; /* Limiting max width for large screens */
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.25s;
+}
+
+.modal-button:hover {
+  background-color: #006bb3;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 80%; /* Modal takes up 80% of screen on tablets */
+    padding: 1.5rem;
+  }
+
+  .modal-button {
+    width: 80%; /* Button takes up 80% of screen width */
+    max-width: none; /* Remove max-width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container {
+    width: 90%; /* Modal takes up 90% of screen on mobile */
+    padding: 1rem;
+  }
+
+  .modal-button {
+    width: 100%; /* Button takes up 100% of the screen width on mobile */
+  }
+}
