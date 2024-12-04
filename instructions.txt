@@ -1,0 +1,11 @@
+cd .\Backend\
+pip install fastapi yt-dlp uvicorn
+
+run code - 
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+cd .\youtube-downloader\
+npm i
+
+run code - 
+npm run dev
