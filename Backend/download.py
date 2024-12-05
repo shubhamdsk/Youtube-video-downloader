@@ -29,10 +29,11 @@ async def start_download(url: str, request):
         try:
             # yt-dlp options
             ydl_opts = {
-                "format": "best",
+                "format": "best", 
                 "progress_hooks": [progress_hook],  # Set progress hook
-                "outtmpl": "%(title)s.%(ext)s",  # Output template for the file name
-                "noplaylist": True,  # Avoid downloading playlists
+                # add here your own download folder path
+                "outtmpl": "C:/Users/shubh/Downloads/Downloads/%(title)s.%(ext)s", 
+                "noplaylist": True, 
             }
             print(f"Starting download for: {url}")  # Debugging log
 
