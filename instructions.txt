@@ -1,3 +1,10 @@
+//python must be downloded in your system
+https://www.python.org/downloads/
+
+//and also node 
+https://nodejs.org/en
+
+
 cd .\Backend\
 pip install fastapi yt-dlp uvicorn
 
